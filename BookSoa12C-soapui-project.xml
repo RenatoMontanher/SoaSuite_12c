@@ -250,4 +250,539 @@
          <con:temperature>-304</con:temperature>\r
       </con:temperatureCelsiusToFahrenheitRequestMessage>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getTemperatureCelsiusToFahrenheit"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getTemperatureCelsiusToFahrenheit"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1cdc20e4-dd6f-4bd1-81e3-df26e4987e3a" wsaVersion="NONE" name="lengthUnitSoap" type="wsdl" bindingName="{http://www.webserviceX.NET/}lengthUnitSoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/length.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/length.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/length.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET/">
+      <s:element name="ChangeLengthUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LengthValue" type="s:double"/>
+            <s:element minOccurs="1" maxOccurs="1" name="fromLengthUnit" type="tns:Lengths"/>
+            <s:element minOccurs="1" maxOccurs="1" name="toLengthUnit" type="tns:Lengths"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="Lengths">
+        <s:restriction base="s:string">
+          <s:enumeration value="Angstroms"/>
+          <s:enumeration value="Nanometers"/>
+          <s:enumeration value="Microinch"/>
+          <s:enumeration value="Microns"/>
+          <s:enumeration value="Mils"/>
+          <s:enumeration value="Millimeters"/>
+          <s:enumeration value="Centimeters"/>
+          <s:enumeration value="Inches"/>
+          <s:enumeration value="Links"/>
+          <s:enumeration value="Spans"/>
+          <s:enumeration value="Feet"/>
+          <s:enumeration value="Cubits"/>
+          <s:enumeration value="Varas"/>
+          <s:enumeration value="Yards"/>
+          <s:enumeration value="Meters"/>
+          <s:enumeration value="Fathoms"/>
+          <s:enumeration value="Rods"/>
+          <s:enumeration value="Chains"/>
+          <s:enumeration value="Furlongs"/>
+          <s:enumeration value="Cablelengths"/>
+          <s:enumeration value="Kilometers"/>
+          <s:enumeration value="Miles"/>
+          <s:enumeration value="Nauticalmile"/>
+          <s:enumeration value="League"/>
+          <s:enumeration value="Nauticalleague"/>
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ChangeLengthUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeLengthUnitResult" type="s:double"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="double" type="s:double"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ChangeLengthUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeLengthUnit"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeLengthUnitResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpGetIn">
+    <wsdl:part name="LengthValue" type="s:string"/>
+    <wsdl:part name="fromLengthUnit" type="s:string"/>
+    <wsdl:part name="toLengthUnit" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpGetOut">
+    <wsdl:part name="Body" element="tns:double"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpPostIn">
+    <wsdl:part name="LengthValue" type="s:string"/>
+    <wsdl:part name="fromLengthUnit" type="s:string"/>
+    <wsdl:part name="toLengthUnit" type="s:string"/>
+  </wsdl:message>
+  <wsdl:message name="ChangeLengthUnitHttpPostOut">
+    <wsdl:part name="Body" element="tns:double"/>
+  </wsdl:message>
+  <wsdl:portType name="lengthUnitSoap">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitSoapIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="lengthUnitHttpGet">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitHttpGetIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="lengthUnitHttpPost">
+    <wsdl:operation name="ChangeLengthUnit">
+      <wsdl:input message="tns:ChangeLengthUnitHttpPostIn"/>
+      <wsdl:output message="tns:ChangeLengthUnitHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="lengthUnitSoap" type="tns:lengthUnitSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <soap:operation soapAction="http://www.webserviceX.NET/ChangeLengthUnit" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitSoap12" type="tns:lengthUnitSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <soap12:operation soapAction="http://www.webserviceX.NET/ChangeLengthUnit" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitHttpGet" type="tns:lengthUnitHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <http:operation location="/ChangeLengthUnit"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="lengthUnitHttpPost" type="tns:lengthUnitHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="ChangeLengthUnit">
+      <http:operation location="/ChangeLengthUnit"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="lengthUnit">
+    <wsdl:port name="lengthUnitSoap" binding="tns:lengthUnitSoap">
+      <soap:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitSoap12" binding="tns:lengthUnitSoap12">
+      <soap12:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitHttpGet" binding="tns:lengthUnitHttpGet">
+      <http:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="lengthUnitHttpPost" binding="tns:lengthUnitHttpPost">
+      <http:address location="http://www.webservicex.net/length.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/ConversionServices-LocalLengthDistanceUnitConvertorService-context-root/lengthUnitSoap</con:endpoint></con:endpoints><con:operation id="bd1105f6-1e98-4e13-adeb-9b80595310ec" isOneWay="false" action="http://www.webserviceX.NET/ChangeLengthUnit" name="ChangeLengthUnit" bindingOperationName="ChangeLengthUnit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dc695197-28c2-4416-a283-91cbd227f322" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/ConversionServices-LocalLengthDistanceUnitConvertorService-context-root/lengthUnitSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>1000</web:LengthValue>\r
+         <web:fromLengthUnit>Millimeters</web:fromLengthUnit>\r
+         <web:toLengthUnit>Centimeters</web:toLengthUnit>\r
+      </web:ChangeLengthUnit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/ChangeLengthUnit"/><con:wsrmConfig version="1.2"/></con:call><con:call id="59c93b87-35f9-45f1-ae68-098c6b682688" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/ConversionServices-LocalLengthDistanceUnitConvertorService-context-root/lengthUnitSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>?</web:LengthValue>\r
+         <web:fromLengthUnit>?</web:fromLengthUnit>\r
+         <web:toLengthUnit>?</web:toLengthUnit>\r
+      </web:ChangeLengthUnit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/ChangeLengthUnit"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="85ed4341-abe9-4593-888c-9acfd90e9f0c" wsaVersion="NONE" name="ConversionServicePortTypeSOAP11Binding" type="wsdl" bindingName="{saibot.airport/services/utility/conversion}ConversionServicePortTypeSOAP11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/utility/ConversionService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7101/utility/ConversionService?wsdl"><con:part><con:url>http://localhost:7101/utility/ConversionService?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions targetNamespace="saibot.airport/services/utility/conversion" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="saibot.airport/services/utility/conversion" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" xmlns:conversion="saibot.airport/services/utility/conversion" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="saibot.airport/services/utility/conversion" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="saibot.airport/services/utility/conversion" schemaLocation="http://localhost:7101/utility/ConversionService?SCHEMA%2FTemperatureConversionService%2FSchemas%2FConversionService"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="temperatureCelsiusToFahrenheitRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:temperatureCelsiusToFahrenheitRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="temperatureCelsiusToFahrenheitResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:temperatureCelsiusToFahrenheitResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="distanceFeetToMeterRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:distanceFeetToMeterRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="distanceFeetToMeterResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:distanceFeetToMeterResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="distanceMileToMeterRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:distanceMileToMeterRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="distanceMileToMeterResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:distanceMileToMeterResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="weightLbToKilogramRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:weightLbToKilogramRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="weightLbToKilogramResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:weightLbToKilogramResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="speedKnotToKMphRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:weightLbToKilogramRequestMessage" name="in"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="speedKnotToKMphResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:weightLbToKilogramResponseMessage" name="return"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="ConversionServicePortType">
+    <WL5G3N0:operation name="getTemperatureCelsiusToFahrenheit">
+      <WL5G3N0:input message="WL5G3N1:temperatureCelsiusToFahrenheitRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:temperatureCelsiusToFahrenheitResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getDistanceFeetToMeter">
+      <WL5G3N0:input message="WL5G3N1:distanceFeetToMeterRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:distanceFeetToMeterResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getDistanceMileToMeter">
+      <WL5G3N0:input message="WL5G3N1:distanceMileToMeterRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:distanceMileToMeterResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getWeightLbToKilogram">
+      <WL5G3N0:input message="WL5G3N1:weightLbToKilogramRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:weightLbToKilogramResponseMessage"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getSpeedKnotToKMph">
+      <WL5G3N0:input message="WL5G3N1:speedKnotToKMphRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:speedKnotToKMphResponseMessage"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="ConversionServicePortTypeSOAP11Binding" type="WL5G3N1:ConversionServicePortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="getTemperatureCelsiusToFahrenheit">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/conversion/getTemperatureCelsiusToFahrenheit" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getDistanceFeetToMeter">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/conversion/getDistanceFeetToMeter" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getDistanceMileToMeter">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/conversion/getDistanceMileToMeter" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getWeightLbToKilogram">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/conversion/getWeightLbToKilogram" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getSpeedKnotToKMph">
+      <WL5G3N2:operation soapAction="saibot.airport/services/utility/conversion/getSpeedKnotToKMph" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="in" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="return" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="ConversionServicePortTypeSOAP11BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N1:ConversionServicePortTypeSOAP11Binding" name="ConversionServicePortTypeSOAP11BindingQSPort">
+      <WL5G3N2:address location="http://localhost:7101/utility/ConversionService"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7101/utility/ConversionService?SCHEMA%2FTemperatureConversionService%2FSchemas%2FConversionService</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/services/utility/conversion" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common" xmlns:conversion="saibot.airport/services/utility/conversion">
+  <xsd:import namespace="saibot.airport/data/common" schemaLocation="http://localhost:7101/utility/ConversionService?SCHEMA%2FTemperatureConversionService%2FSchemas%2Fcommon"/>
+  <xsd:element name="temperatureCelsiusToFahrenheitRequestMessage" type="conversion:temperatureCelsiusType"/>
+  <xsd:element name="temperatureCelsiusToFahrenheitResponseMessage" type="conversion:temperatureFahrenheitType"/>
+  <xsd:element name="distanceFeetToMeterRequestMessage" type="common:distanceType"/>
+  <xsd:element name="distanceFeetToMeterResponseMessage" type="common:distanceType"/>
+  <xsd:element name="distanceMileToMeterRequestMessage" type="common:distanceType"/>
+  <xsd:element name="distanceMileToMeterResponseMessage" type="common:distanceType"/>
+  <xsd:element name="weightLbToKilogramRequestMessage" type="xsd:double"/>
+  <xsd:element name="weightLbToKilogramResponseMessage" type="xsd:double"/>
+  <xsd:element name="speedKnotToKMphRequestMessage" type="xsd:double"/>
+  <xsd:element name="speedKnotToKMphResponseMessage" type="xsd:double"/>
+  <xsd:complexType name="temperatureCelsiusType">
+    <xsd:sequence>
+      <xsd:element name="temperature" nillable="false" type="common:baseCelsiusTemperatureType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="temperatureFahrenheitType">
+    <xsd:sequence>
+      <xsd:element name="temperature" nillable="false" type="common:baseFahrenheitTemperatureType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:7101/utility/ConversionService?SCHEMA%2FTemperatureConversionService%2FSchemas%2Fcommon</con:url><con:content><![CDATA[<xsd:schema targetNamespace="saibot.airport/data/common" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:common="saibot.airport/data/common">
+  <xsd:simpleType name="baseCelsiusTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-273.15"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="baseFahrenheitTemperatureType">
+    <xsd:restriction base="xsd:float">
+      <xsd:minInclusive value="-459.67"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha2Type">
+    <xsd:annotation>
+      <xsd:documentation>2-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2"/>
+      <xsd:pattern value="[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alpha3Type">
+    <xsd:annotation>
+      <xsd:documentation>3-char uppercase strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[A-Z]{3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="alphaNumeric4Type">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="countryCodeType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the unique two letter ISO 3166-1 indication for a country - see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 and http://www.iso.org/iso/home/standards/country_codes.htm</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirportType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the three letter IATA identification for airports; see for example http://www.world-airport-codes.com/ and http://www.iata.org/publications/Pages/code-search.aspx</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha3Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataAirlineType">
+    <xsd:annotation>
+      <xsd:documentation>the code is the two letter IATA identification for airlines (carriers); see for example http://www.iata.org/publications/Pages/code-search.aspx; http://en.wikipedia.org/wiki/Airline_codes-All</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="common:alpha2Type"></xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iacoCodeType">
+    <xsd:annotation>
+      <xsd:documentation>4-char strings only</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="4"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="iataEquipmentCodeType">
+    <xsd:annotation>
+      <xsd:documentation>strings with numbers and captials only; see for example
+                         http://www.flugzeuginfo.net/table_accodes_iata_en.php</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+      <xsd:pattern value="[0-9A-Z]{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="timezoneOffsetType">
+    <xsd:annotation>
+      <xsd:documentation>an offset (in hours) versus UTC</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:float">
+      <!--<xsd:fractionDigits value="2"/>-->
+      <xsd:maxInclusive value="12"/>
+      <xsd:minInclusive value="-12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="geoLocationType">
+    <xsd:sequence>
+      <xsd:element name="latitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="longitude" nillable="false" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="elevation" nillable="false" type="xsd:double" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="distanceType">
+    <xsd:annotation>
+      <xsd:documentation>a distance in some unspecified unit</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightNumberType">
+    <xsd:annotation>
+      <xsd:documentation>A flight number. Flight numbers are integer values
+                         within the range of [0-9999]. Example: 1234</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="9999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="hourOfDayType">
+    <xsd:annotation>
+      <xsd:documentation>An hour during the day: 0-23</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="23"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="fiveMinuteBlockType">
+    <xsd:annotation>
+      <xsd:documentation>A five minute block within one clock hour: 0(-5), 5(-10), 10()-15)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="55"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="yesNoType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Yes"/>
+      <xsd:enumeration value="No"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="periodType">
+    <xsd:sequence>
+      <xsd:element name="season" nillable="false" type="common:seasonType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="year" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="searchMetaType">
+    <xsd:sequence>
+      <xsd:element name="offset" nillable="false" type="xsd:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="numberOfResults" nillable="false" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="sortBy" nillable="false" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="flightStatusType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Active"/>
+      <xsd:enumeration value="Suspended"/>
+      <xsd:enumeration value="Open"/>
+      <xsd:enumeration value="Closed"/>
+      <xsd:enumeration value="Cancelled"/>
+      <xsd:enumeration value="Diverted"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="flightActionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EnRoute"/>
+      <xsd:enumeration value="FinalApproach"/>
+      <xsd:enumeration value="Taxiing"/>
+      <xsd:enumeration value="AtGate"/>
+      <xsd:enumeration value="BagageOnBelt"/>
+      <xsd:enumeration value="Prepare"/>
+      <xsd:enumeration value="GateOpen"/>
+      <xsd:enumeration value="GateClosing"/>
+      <xsd:enumeration value="GateClosed"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="seasonType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="S"/>
+      <xsd:enumeration value="W"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="arrivalOrDepartureType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="D"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="weekDayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Monday"/>
+      <xsd:enumeration value="Tuesday"/>
+      <xsd:enumeration value="Wednesday"/>
+      <xsd:enumeration value="Thursday"/>
+      <xsd:enumeration value="Friday"/>
+      <xsd:enumeration value="Saturday"/>
+      <xsd:enumeration value="Sunday"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint></con:endpoints><con:operation id="8886df97-0a52-4028-bf64-df72007719d7" isOneWay="false" action="saibot.airport/services/utility/conversion/getDistanceFeetToMeter" name="getDistanceFeetToMeter" bindingOperationName="getDistanceFeetToMeter" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fb962613-041f-43e7-9de6-6428764eda12" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="saibot.airport/services/utility/conversion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:distanceFeetToMeterRequestMessage>10</con:distanceFeetToMeterRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getDistanceFeetToMeter"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="75b5526b-7f53-4801-a429-0e56f760f40c" isOneWay="false" action="saibot.airport/services/utility/conversion/getDistanceMileToMeter" name="getDistanceMileToMeter" bindingOperationName="getDistanceMileToMeter" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e09bddd4-d4ea-4a14-a519-f25138bf30c1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="saibot.airport/services/utility/conversion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:distanceMileToMeterRequestMessage>?</con:distanceMileToMeterRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getDistanceMileToMeter"/></con:call></con:operation><con:operation id="ee559706-339e-4ba7-bd2e-853f43f2b141" isOneWay="false" action="saibot.airport/services/utility/conversion/getSpeedKnotToKMph" name="getSpeedKnotToKMph" bindingOperationName="getSpeedKnotToKMph" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="efb61e75-ede0-4f82-937a-8936939700f6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="saibot.airport/services/utility/conversion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:weightLbToKilogramRequestMessage>?</con:weightLbToKilogramRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getSpeedKnotToKMph"/></con:call></con:operation><con:operation id="a7c220b2-77c2-477f-9a59-04e30c9fb95b" isOneWay="false" action="saibot.airport/services/utility/conversion/getTemperatureCelsiusToFahrenheit" name="getTemperatureCelsiusToFahrenheit" bindingOperationName="getTemperatureCelsiusToFahrenheit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="01dda27f-207d-4f77-9123-778ad193d3b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="saibot.airport/services/utility/conversion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:temperatureCelsiusToFahrenheitRequestMessage>\r
+         <con:temperature>?</con:temperature>\r
+      </con:temperatureCelsiusToFahrenheitRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getTemperatureCelsiusToFahrenheit"/></con:call></con:operation><con:operation id="5c6f6652-dc2c-4426-8a77-9fd9b441b22b" isOneWay="false" action="saibot.airport/services/utility/conversion/getWeightLbToKilogram" name="getWeightLbToKilogram" bindingOperationName="getWeightLbToKilogram" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="666e7c93-fe45-4a4e-ad24-f859326e92a2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/utility/ConversionService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="saibot.airport/services/utility/conversion">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <con:weightLbToKilogramRequestMessage>?</con:weightLbToKilogramRequestMessage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="saibot.airport/services/utility/conversion/getWeightLbToKilogram"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f8e3a072-718c-4ea4-b970-728e7353c060" wsaVersion="NONE" name="lengthUnitSoap12" type="wsdl" bindingName="{http://www.webserviceX.NET/}lengthUnitSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.webservicex.net/length.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint></con:endpoints><con:operation id="a363dbc6-14b6-4727-b0c2-4cddb2c46ec3" isOneWay="false" action="http://www.webserviceX.NET/ChangeLengthUnit" name="ChangeLengthUnit" bindingOperationName="ChangeLengthUnit" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d58c2c66-fb5d-412f-ba0c-f63acb72e266" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/length.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.webserviceX.NET/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <web:ChangeLengthUnit>\r
+         <web:LengthValue>1000</web:LengthValue>
+         <web:fromLengthUnit>Feet</web:fromLengthUnit>
+         <web:toLengthUnit>Meters</web:toLengthUnit>
+      </web:ChangeLengthUnit>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.webserviceX.NET/lengthUnitSoap/ChangeLengthUnitRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
