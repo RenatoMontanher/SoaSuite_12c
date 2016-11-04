@@ -25,11 +25,11 @@
         <dgm:operations/>
     </dgm:gService>
     <dgm:gReference name="LengthDistanceUnitConvertorService">
-        <dgm:body borderWidth="2" arcRad="20" X="745" Y="127" width="136" height="54">
+        <dgm:body borderWidth="2" arcRad="20" X="757" Y="127" width="136" height="54">
             <dgm:borderColor r="153" g="153" b="153"/>
             <dgm:bgColor r="255" g="255" b="255"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="735" Y="120" width="156" height="68">
+        <dgm:shadow arcRad="20" X="747" Y="120" width="156" height="68">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="LengthDistanceUnitConvertorService" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
@@ -37,12 +37,12 @@
         <dgm:operations/>
     </dgm:gReference>
     <dgm:gComponent name="ConversionPipeline">
-        <dgm:body borderWidth="2" arcRad="20" X="506" Y="112" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="514" Y="112" width="130" height="61">
             <dgm:borderColor r="109" g="136" b="65"/>
             <dgm:lightBgColor r="201" g="224" b="155"/>
             <dgm:darkBgColor r="157" g="195" b="93"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="496" Y="105" width="150" height="77">
+        <dgm:shadow arcRad="20" X="504" Y="105" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="__service__" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
@@ -50,29 +50,29 @@
         <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_pipeline_20x20.gif" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="TemperatureConversionPipeline">
-        <dgm:body borderWidth="2" arcRad="20" X="267" Y="26" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="271" Y="26" width="130" height="61">
             <dgm:borderColor r="109" g="136" b="65"/>
             <dgm:lightBgColor r="201" g="224" b="155"/>
             <dgm:darkBgColor r="157" g="195" b="93"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="257" Y="19" width="150" height="77">
+        <dgm:shadow arcRad="20" X="261" Y="19" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="__service__" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
         <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_pipeline_20x20.gif" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gWireLink source="ConversionServicePS" target="ConversionPipeline/__service__" width="2">
-        <dgm:gSegment X1="168" Y1="137" X2="496" Y2="137"/>
+        <dgm:gSegment X1="168" Y1="137" X2="504" Y2="137"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="TemperatureConversionService" target="TemperatureConversionPipeline/__service__" width="2">
-        <dgm:gSegment X1="168" Y1="51" X2="257" Y2="51"/>
+        <dgm:gSegment X1="168" Y1="51" X2="261" Y2="51"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="ConversionPipeline/businessservice.1508210201.LengthDistanceUnitConvertorService" target="LengthDistanceUnitConvertorService" width="2">
-        <dgm:gSegment X1="646" Y1="137" X2="735" Y2="137"/>
+        <dgm:gSegment X1="654" Y1="137" X2="747" Y2="137"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
