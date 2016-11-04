@@ -25,10 +25,13 @@
         <tran:URI>
             <env:value>http://www.webservicex.net/length.asmx</env:value>
         </tran:URI>
+        <tran:URI>
+            <env:value>http://localhost:7001/TemperatureConversionService/Business_Service/LengthDistanceUnitConvertorService</env:value>
+        </tran:URI>
         <tran:outbound-properties>
-            <tran:load-balancing-algorithm>round-robin</tran:load-balancing-algorithm>
-            <tran:retry-count>0</tran:retry-count>
-            <tran:retry-interval>30</tran:retry-interval>
+            <tran:load-balancing-algorithm>none</tran:load-balancing-algorithm>
+            <tran:retry-count>2</tran:retry-count>
+            <tran:retry-interval>1</tran:retry-interval>
             <tran:retry-application-errors>false</tran:retry-application-errors>
         </tran:outbound-properties>
         <tran:provider-specific>
