@@ -39,9 +39,12 @@
                 <con:actions>
                     <con2:replace varName="body" contents-only="true">
                         <con1:id>_ActionId-a060b72.1fb02cff.0.158300553b1.N7ffe</con1:id>
+                        <con2:location>
+                            <con1:xpathText>.</con1:xpathText>
+                        </con2:location>
                         <con2:expr>
                             <con1:xsltTransform>
-                                <con1:resource ref="TemperatureConversionService/Transformations/temperatureCelsiusToFahrenheitRequestToResponse"/>
+                                <con1:resource ref="TemperatureConversionService/Transformations/changeLengthUnitResponseTodistanceFeetToMeterResponse"/>
                                 <con1:input>$body</con1:input>
                             </con1:xsltTransform>
                         </con2:expr>
