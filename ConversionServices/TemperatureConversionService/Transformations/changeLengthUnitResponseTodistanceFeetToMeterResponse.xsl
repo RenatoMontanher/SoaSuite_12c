@@ -25,7 +25,7 @@
    <!--User Editing allowed BELOW this line - DO NOT DELETE THIS LINE-->
    <xsl:template match="/">
       <tns:distanceFeetToMeterResponseMessage>
-         <xsl:value-of select="/ns0:ChangeLengthUnitResponse/ns0:ChangeLengthUnitResult"/>
+         <xsl:value-of select="//ns0:ChangeLengthUnitResponse/ns0:ChangeLengthUnitResult"/>
       </tns:distanceFeetToMeterResponseMessage>
    </xsl:template>
 </xsl:stylesheet>

@@ -37,11 +37,15 @@
                     <con1:userNsDecl prefix="con" namespace="saibot.airport/services/utility/conversion"/>
                 </con:context>
                 <con:actions>
+                    <con4:log>
+                        <con1:id>_ActionId-a060b72.680999f0.0.1583f7206cc.N7fcb</con1:id>
+                        <con4:logLevel>warning</con4:logLevel>
+                        <con4:expr>
+                            <con1:xqueryText>$body</con1:xqueryText>
+                        </con4:expr>
+                    </con4:log>
                     <con2:replace varName="body" contents-only="true">
                         <con1:id>_ActionId-a060b72.1fb02cff.0.158300553b1.N7ffe</con1:id>
-                        <con2:location>
-                            <con1:xpathText>.</con1:xpathText>
-                        </con2:location>
                         <con2:expr>
                             <con1:xsltTransform>
                                 <con1:resource ref="TemperatureConversionService/Transformations/changeLengthUnitResponseTodistanceFeetToMeterResponse"/>
@@ -78,6 +82,24 @@
                                         <con1:id>_ActionId-a060b72.4f21142d.0.1582f8ea9f4.N7ff9</con1:id>
                                         <con3:service ref="TemperatureConversionService/Business Service/LengthDistanceUnitConvertorService" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
                                         <con3:operation>ChangeLengthUnit</con3:operation>
+                                        <con3:outboundTransform/>
+                                        <con3:responseTransform/>
+                                    </con3:route>
+                                </con:actions>
+                            </con:route-node>
+                        </con:flow>
+                    </con:branch>
+                    <con:branch name="getTemperatureCelsiusToFahrenheit">
+                        <con:operator>equals</con:operator>
+                        <con:value/>
+                        <con:flow>
+                            <con:route-node name="RouteNode1">
+                                <con:context/>
+                                <con:actions>
+                                    <con3:route>
+                                        <con1:id>_ActionId-a060b72.2079d96c.0.158d02541e9.N7ffa</con1:id>
+                                        <con3:service ref="TemperatureConversionService/Pipeline/TemperatureConversionPipeline" xsi:type="con:PipelineRef"/>
+                                        <con3:operation>getTemperatureCelsiusToFahrenheit</con3:operation>
                                         <con3:outboundTransform/>
                                         <con3:responseTransform/>
                                     </con3:route>

@@ -58,7 +58,7 @@
                         <con3:description>Validation Error</con3:description>
                         <con3:severity>warning</con3:severity>
                         <con3:payload>
-                            <con1:xqueryText>concat($fault/ctx:errorCode,' ',$fault/ctx:details)</con1:xqueryText>
+                            <con1:xqueryText>concat('ERROOOO AQQUI',$fault/ctx:errorCode,' ',$fault/ctx:details)</con1:xqueryText>
                         </con3:payload>
                     </con3:alert>
                     <con4:report>

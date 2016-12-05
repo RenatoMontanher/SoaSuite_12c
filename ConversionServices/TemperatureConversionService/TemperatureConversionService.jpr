@@ -114,6 +114,10 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
+         <hash n="ServiceBus1">
+            <value n="profileClass" v="SbProjectDeployProfile"/>
+            <value n="profileName" v="ServiceBus1"/>
+         </hash>
          <hash n="TemperatureConversionService">
             <value n="profileClass" v="SbProjectDeployProfile"/>
             <value n="profileName" v="TemperatureConversionService"/>
@@ -121,6 +125,7 @@
       </hash>
       <list n="profileList">
          <string v="TemperatureConversionService"/>
+         <string v="ServiceBus1"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
@@ -167,6 +172,7 @@
                <value n="promptForRemoteDebugging" v="false"/>
                <value n="remoteProtocol" v="SOACommon"/>
             </hash>
+            <value n="remoteDebuggingProfiling" v="false"/>
             <url n="targetURL" path="servicebus.sboverview"/>
          </hash>
       </hash>

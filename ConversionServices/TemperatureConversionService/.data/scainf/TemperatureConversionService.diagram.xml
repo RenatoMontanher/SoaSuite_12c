@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
     <dgm:gService name="ConversionServicePS">
-        <dgm:body borderWidth="2" arcRad="20" X="21" Y="127" width="137" height="54">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="114" width="137" height="54">
             <dgm:borderColor r="153" g="153" b="153"/>
             <dgm:bgColor r="255" g="255" b="255"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="11" Y="120" width="156" height="68">
+        <dgm:shadow arcRad="20" X="11" Y="107" width="156" height="68">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:outputPort name="ConversionServicePS" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
         <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_transport_http_20x20.png" X="7" Y="4" width="20" height="20"/>
         <dgm:operations/>
     </dgm:gService>
-    <dgm:gService name="TemperatureConversionService">
-        <dgm:body borderWidth="2" arcRad="20" X="21" Y="41" width="137" height="54">
+    <dgm:gService name="RestService">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="26" width="137" height="54">
             <dgm:borderColor r="153" g="153" b="153"/>
             <dgm:bgColor r="255" g="255" b="255"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="11" Y="34" width="156" height="68">
+        <dgm:shadow arcRad="20" X="11" Y="19" width="156" height="68">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
-        <dgm:outputPort name="TemperatureConversionService" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
-        <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_transport_http_20x20.png" X="7" Y="4" width="20" height="20"/>
+        <dgm:outputPort name="RestService" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/RestAdapterService20x20px.png" X="7" Y="4" width="20" height="20"/>
         <dgm:operations/>
     </dgm:gService>
     <dgm:gReference name="LengthDistanceUnitConvertorService">
-        <dgm:body borderWidth="2" arcRad="20" X="1237" Y="127" width="136" height="54">
+        <dgm:body borderWidth="2" arcRad="20" X="679" Y="40" width="136" height="54">
             <dgm:borderColor r="153" g="153" b="153"/>
             <dgm:bgColor r="255" g="255" b="255"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="1227" Y="120" width="156" height="68">
+        <dgm:shadow arcRad="20" X="669" Y="33" width="156" height="68">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="LengthDistanceUnitConvertorService" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
@@ -37,42 +37,54 @@
         <dgm:operations/>
     </dgm:gReference>
     <dgm:gComponent name="ConversionPipeline">
-        <dgm:body borderWidth="2" arcRad="20" X="834" Y="112" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="245" Y="54" width="130" height="86">
             <dgm:borderColor r="109" g="136" b="65"/>
             <dgm:lightBgColor r="201" g="224" b="155"/>
             <dgm:darkBgColor r="157" g="195" b="93"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="824" Y="105" width="150" height="77">
+        <dgm:shadow arcRad="20" X="235" Y="47" width="150" height="102">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="__service__" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
         <dgm:outputPort name="businessservice.1508210201.LengthDistanceUnitConvertorService" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
+        <dgm:outputPort name="pipeline.-1133950330.TemperatureConversionPipeline" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
         <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_pipeline_20x20.gif" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="TemperatureConversionPipeline">
-        <dgm:body borderWidth="2" arcRad="20" X="431" Y="26" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="462" Y="79" width="130" height="61">
             <dgm:borderColor r="109" g="136" b="65"/>
             <dgm:lightBgColor r="201" g="224" b="155"/>
             <dgm:darkBgColor r="157" g="195" b="93"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="421" Y="19" width="150" height="77">
+        <dgm:shadow arcRad="20" X="452" Y="72" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="__service__" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="SB Interface" callbackInterface="SB Interface"/>
         <dgm:nodeIcon URI="/oracle/sb/tooling/ide/sca/internal/icons/icon_pipeline_20x20.gif" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gWireLink source="ConversionServicePS" target="ConversionPipeline/__service__" width="2">
-        <dgm:gSegment X1="168" Y1="137" X2="824" Y2="137"/>
+        <dgm:gSegment X1="168" Y1="124" X2="192" Y2="124"/>
+        <dgm:gSegment X1="192" Y1="124" X2="192" Y2="79"/>
+        <dgm:gSegment X1="192" Y1="79" X2="235" Y2="79"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
-    <dgm:gWireLink source="TemperatureConversionService" target="TemperatureConversionPipeline/__service__" width="2">
-        <dgm:gSegment X1="168" Y1="51" X2="421" Y2="51"/>
+    <dgm:gWireLink source="RestService" target="ConversionPipeline/__service__" width="2">
+        <dgm:gSegment X1="168" Y1="36" X2="207" Y2="36"/>
+        <dgm:gSegment X1="207" Y1="36" X2="207" Y2="79"/>
+        <dgm:gSegment X1="207" Y1="79" X2="235" Y2="79"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="ConversionPipeline/businessservice.1508210201.LengthDistanceUnitConvertorService" target="LengthDistanceUnitConvertorService" width="2">
-        <dgm:gSegment X1="974" Y1="137" X2="1227" Y2="137"/>
+        <dgm:gSegment X1="385" Y1="79" X2="409" Y2="79"/>
+        <dgm:gSegment X1="409" Y1="79" X2="409" Y2="50"/>
+        <dgm:gSegment X1="409" Y1="50" X2="669" Y2="50"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ConversionPipeline/pipeline.-1133950330.TemperatureConversionPipeline" target="TemperatureConversionPipeline/__service__" width="2">
+        <dgm:gSegment X1="385" Y1="104" X2="452" Y2="104"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
